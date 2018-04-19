@@ -1,9 +1,5 @@
 import App from '@/App';
 import { shallow } from 'vue-test-utils';
-// import HelloWorld from '@/components/HelloWorld';
-
-// jest.mock('HelloWorld');
-
 
 describe('App.vue', () => {
   let cmp;
