@@ -1,11 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import { storiesOf } from '@storybook/vue';
-import { withKnobs, array } from '@storybook/addon-knobs/vue';
+import { storiesOf } from '@storybook/vue'
+import { withKnobs, array } from '@storybook/addon-knobs/vue'
 
-import Ingredient from '@/components/Ingredient';
-import IngredientList from '@/components/IngredientList';
-import '@/assets/styles/main.css';
+import Ingredient from '@/components/Ingredient'
+import IngredientList from '@/components/IngredientList'
+import '@/assets/styles/main.css'
 
 storiesOf('IngredientList', module)
   .addDecorator(withKnobs)
@@ -19,6 +19,6 @@ storiesOf('IngredientList', module)
         <ingredient slot="ingredient" slot-scope="{ ingredient }" :value="ingredient"/>
       </ingredient-list>
     `
-  }));
+  }))
 
 /* eslint-enable react/react-in-jsx-scope */
