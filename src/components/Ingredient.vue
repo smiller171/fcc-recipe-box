@@ -1,9 +1,15 @@
+<template>
+  <div class="ingredient">
+    <span class="ingredientText">{{ value }}</span>
+  </div>
+</template>
+
 <script>
 export default {
   props: {
-    ingredient: {
+    value: {
       type: String,
-      default: () => undefined
+      default: () => null
     }
   }
 };

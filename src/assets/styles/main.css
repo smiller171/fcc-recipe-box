@@ -1,0 +1,30 @@
+body {
+  background-color: #e0e0e0;
+}
+
+.ingredient {
+  border: 1px solid #000;
+  border-bottom: none;
+  padding: .5rem;
+  background-color: #fafafa;
+}
+
+div:first-child > .ingredient {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+
+div:last-child > .ingredient {
+  border-bottom: 1px solid #000;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+#app {
+  color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 60px;
+  text-align: center;
+}
