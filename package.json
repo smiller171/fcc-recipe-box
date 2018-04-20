@@ -16,11 +16,10 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@millergeek/test-utils": "smiller171/vue-test-utils#client-only",
     "vue": "^2.5.16"
   },
   "devDependencies": {
-    "@millergeek/test-utils": "smiller171/vue-test-utils#client-only",
+    "@millergeek/test-utils": "latest",
     "@storybook/addon-actions": "^3.4.2",
     "@storybook/addon-console": "^1.0.0",
     "@storybook/addon-knobs": "^3.4.2",

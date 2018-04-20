@@ -18,6 +18,16 @@ describe('Ingredient.vue', () => {
     expect(cmp.html()).toEqual(expected)
   })
 
+  it('should have a span with class "ingredientText"', () => {
+    const expected = expect.stringMatching(/<span class="(\w* )*ingredientText(\w* )*">/)
+    expect(cmp.html()).toEqual(expected)
+  })
+
+  it('should default to no ingredient text', () => {
+    const expected = expect.stringMatching(/<span.*>/)
+    expect(cmp.html()).toEqual(expected)
+  })
+
   valArray.forEach((item) => {
     it(`should return ingredient "${item}"`, () => {
       cmp.setProps({ value: item })

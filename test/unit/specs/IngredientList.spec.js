@@ -5,9 +5,6 @@ describe('Ingredient.vue', () => {
   const cmp = shallow(IngredientList, {
     scopedSlots: {
       ingredient: '<span slot-scope="item">{{item.ingredient}}</span>'
-    },
-    propsData: {
-      list: ['carrots', 'celary', 'mushrooms']
     }
   })
 
@@ -23,11 +20,17 @@ describe('Ingredient.vue', () => {
   it('should have a prop called "list" that accepts an array', () => {
     expect(cmp.vm.list).toBeDefined()
   })
+  it('should be empty by default', () => {
+    const expected = expect.stringMatching(/<span.*>.*<\/span>/)
+    expect(cmp.html()).not.toEqual(expected)
+  })
   it('should have a slot named "item"', () => {
+    cmp.setProps({ list: ['test'] })
     const expected = expect.stringMatching(/<span.*>.*<\/span>/)
     expect(cmp.html()).toEqual(expected)
   })
   it('should have an item slot that is a div', () => {
+    cmp.setProps({ list: ['test'] })
     const expected = expect.stringMatching(/<div.*><span.*>.*<\/span><\/div>/)
     expect(cmp.html()).toEqual(expected)
   })
