@@ -24,8 +24,7 @@ describe('Ingredient.vue', () => {
   })
 
   it('should default to no ingredient text', () => {
-    const expected = expect.stringMatching(/<span.*>/)
-    expect(cmp.html()).toEqual(expected)
+    expect(cmp.vm.value).toEqual(null)
   })
 
   valArray.forEach((item) => {

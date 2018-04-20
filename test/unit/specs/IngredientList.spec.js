@@ -21,8 +21,7 @@ describe('Ingredient.vue', () => {
     expect(cmp.vm.list).toBeDefined()
   })
   it('should be empty by default', () => {
-    const expected = expect.stringMatching(/<span.*>.*<\/span>/)
-    expect(cmp.html()).not.toEqual(expected)
+    expect(cmp.vm.list).toEqual([])
   })
   it('should have a slot named "item"', () => {
     cmp.setProps({ list: ['test'] })
