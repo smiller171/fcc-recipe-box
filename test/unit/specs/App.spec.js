@@ -1,5 +1,5 @@
 import App from '@/App'
-import { shallow } from '@millergeek/test-utils'
+import { shallow } from '@vue/test-utils'
 
 describe('App.vue', () => {
   let cmp

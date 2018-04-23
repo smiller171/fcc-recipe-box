@@ -1,5 +1,5 @@
 import Ingredient from '@/components/Ingredient'
-import { shallow } from '@millergeek/test-utils'
+import { shallow } from '@vue/test-utils'
 
 describe('Ingredient.vue', () => {
   const cmp = shallow(Ingredient, {})

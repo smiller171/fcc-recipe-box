@@ -1,10 +1,10 @@
 import IngredientList from '@/components/IngredientList'
-import { shallow } from '@millergeek/test-utils'
+import { shallow } from '@vue/test-utils'
 
 describe('Ingredient.vue', () => {
   const cmp = shallow(IngredientList, {
     scopedSlots: {
-      ingredient: '<span slot-scope="item">{{item.ingredient}}</span>'
+      ingredient: '<span slot-scope="{ingredient}">{{ingredient}}</span>'
     }
   })
 

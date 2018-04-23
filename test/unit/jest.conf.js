@@ -20,6 +20,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.{js,vue}',
     '!src/main.js',
-    '!**/node_modules/**'
+    '!**/node_modules/**',
+    '!src/stories/**'
   ]
 }
