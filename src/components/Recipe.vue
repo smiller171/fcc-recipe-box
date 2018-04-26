@@ -17,6 +17,10 @@
         value="Delete"
         name="deleteButton"
       />
+      <slot
+        value="Edit"
+        name="editButton"
+      />
     </div>
   </div>
 </template>

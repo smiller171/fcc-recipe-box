@@ -35,6 +35,8 @@ storiesOf('Recipe', module)
         <ingredient-list slot="ingredients" slot-scope="{value}" :ingredients="value">
           <ingredient slot="ingredient" slot-scope="{ ingredient }" :value="ingredient"/>
         </ingredient-list>
+        <button slot="deleteButton" slot-scope="{value}">{{value}}</button>
+        <button slot="editButton" slot-scope="{value}">{{value}}</button>
       </recipe>
       
     `

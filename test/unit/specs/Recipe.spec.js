@@ -7,6 +7,7 @@ describe('Recipe.vue', () => {
       name: '<h2 slot-scope="{value}" class="header">{{value}}</h2>',
       subtitle: '<h3 slot-scope="{value}" class="subtitle">{{value}}</h3>',
       deleteButton: '<button slot-scope="{value}" class="delete">{{value}}</button>',
+      editButton: '<button slot-scope="{value}" class="edit">{{value}}</button>',
       ingredients: `
         <div slot-scope="{value}" class="ingredientsList">
           <span v-for="item in value">{{item}}</span>
@@ -79,6 +80,10 @@ describe('Recipe.vue', () => {
   })
   it('should have a "deleteButton" slot', () => {
     const expected = expect.stringContaining('<button class="delete">')
+    expect(cmp.html()).toEqual(expected)
+  })
+  it('should have an "editButton" slot', () => {
+    const expected = expect.stringContaining('<button class="edit">')
     expect(cmp.html()).toEqual(expected)
   })
 })
