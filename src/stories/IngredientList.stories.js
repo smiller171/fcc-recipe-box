@@ -12,10 +12,10 @@ storiesOf('IngredientList', module)
   .add('default', () => ({
     components: { IngredientList, Ingredient },
     data: () => ({
-      list: array('Ingredient List', ['potatoes', 'onions', 'cucumber'])
+      list: array('ingredients', ['potatoes', 'onions', 'cucumber'])
     }),
     template: `
-      <ingredient-list :list="list">
+      <ingredient-list :ingredients="list">
         <ingredient slot="ingredient" slot-scope="{ ingredient }" :value="ingredient"/>
       </ingredient-list>
     `

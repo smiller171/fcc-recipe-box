@@ -1,7 +1,7 @@
 <template>
   <div class="ingredientList">
     <div
-      v-for="ingredient in list"
+      v-for="ingredient in ingredients"
       :key="ingredient"
     >
       <slot
@@ -15,7 +15,7 @@
 <script>
 export default {
   props: {
-    list: {
+    ingredients: {
       type: Array,
       default: () => []
     }

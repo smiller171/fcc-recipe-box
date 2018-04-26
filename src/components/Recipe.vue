@@ -1,8 +1,8 @@
 <template>
   <div>
     <slot
-      :value="header"
-      name="header"
+      :value="name"
+      name="name"
     />
     <div class="detailsPanel">
       <slot
@@ -10,8 +10,12 @@
         name="subtitle"
       />
       <slot
-        :value="list"
-        name="list"
+        :value="ingredients"
+        name="ingredients"
+      />
+      <slot
+        value="Delete"
+        name="deleteButton"
       />
     </div>
   </div>
@@ -20,11 +24,19 @@
 <script>
 export default {
   props: {
-    header: {
+    recipe: {
+      type: Object,
+      default: () => ({}),
+      name: {
+        type: String,
+        default: 'header'
+      }
+    },
+    name: {
       type: String,
       default: 'header'
     },
-    list: {
+    ingredients: {
       type: Array,
       default: () => []
     }
